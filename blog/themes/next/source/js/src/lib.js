@@ -5261,6 +5261,3 @@ var App = App || {};
     }();
     App.waveCanvas = e, App.waveCanvas.initialize()
 }();
-
-
-$('#loading').fadeOut(3000);

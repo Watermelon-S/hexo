@@ -107,3 +107,5 @@
 {% if theme.canonical %}
   <link rel="canonical" href="{{ config.url }}/{{ page.canonical_path.replace('index.html', '') }}"/>
 {% endif %}
+
+<script src="{{ url_for(theme.js) }}/src/loading.js"></script>

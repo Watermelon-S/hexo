@@ -16,7 +16,7 @@ avatar:
 url: http://southveil.red
 root: /
 # permalink: :title/
-permalink: :year/:month/:day/:title.html
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # google_analytics
@@ -77,7 +77,7 @@ deploy:
   repository: git@github.com:Watermelon-S/Watermelon-S.github.io.git #部署的仓库的SSH
   branch: master #部署分支， 一般使用master主分支
   message: update #默认类型
-- type: baidu_url_submitter
+
 
 #多说
 duoshuo_shortname: watermelon-s
@@ -89,9 +89,3 @@ algolia:
   adminApiKey: '833b2c3ca943d22a39bc42a561daa322'
   indexName: 'test'
   chunkSize: 5000
-
-baidu_url_submit:
-  count: 3 ## 比如3，代表提交最新的三个链接
-  host: southveil.red ## 在百度站长平台中注册的域名
-  token: r7bBRjBOxXNNZS3S ## !
-  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里

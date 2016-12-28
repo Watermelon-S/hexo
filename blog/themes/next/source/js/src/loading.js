@@ -85,9 +85,7 @@ var ck = new Cookie("HasLoaded"),_LoadingHtml; //每个页面的new Cookie名Has
 if (ck.Read() == null) { //未加载过，Cookie内容为空
     // alert("首次打开页面");
     var dd = new Date();
-    console.log(dd)
     dd.setDate(dd.getDate() + 0.025);
-    console.log(dd)
     ck.setExpiresTime(dd); //过期时间
     ck.Write("true"); //设置Cookie。只要IE不关闭，Cookie就一直存在
     _LoadingHtml = "<div id='loading'><div class='loader'><div class='loader_overlay'></div><div class='loader_cogs'><div class='loader_cogs__top'><div class='top_part'></div><div class='top_part'></div><div class='top_part'></div><div class='top_hole'></div></div><div class='loader_cogs__left'><div class='left_part'></div><div class='left_part'></div><div class='left_part'></div><div class='left_hole'></div></div><div class='loader_cogs__bottom'><div class='bottom_part'></div><div class='bottom_part'></div><div class='bottom_part'></div><div class='bottom_hole'><!--lol--></div></div><p>loading</p></div><h1>Southveil Red</h1><h2>Welcome to my blog</h2></div></div>";

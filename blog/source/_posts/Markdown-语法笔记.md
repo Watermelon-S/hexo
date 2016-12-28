@@ -3,7 +3,7 @@ title: Markdown 语法笔记
 date: 2016-11-07 12:41:23
 categories: 技术
 tags:
- -markdown
+ - markdown
 ---
 <blockquote class="blockquote-center">
 [Markdown](http://zh.wikipedia.org/wiki/Markdown) 是一种轻量级的「标记语言」，它的优点很多，
@@ -34,7 +34,7 @@ Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦�
 * 纯文本内容，兼容所有的文本编辑器与字处理软件。
 * 可读，直观。适合所有人的写作语言。
 
-> ###Markdown 语法的简要规则
+> ### Markdown 语法的简要规则
 
 #### 标题
 
@@ -67,7 +67,7 @@ Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦�
 
 ```
 
-##### 无序列表
+##### 有序列表
 ```
 1.                 
 2. 
@@ -85,7 +85,7 @@ Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦�
 
 只需要在文本前加入 > 这种尖括号（大于号）即可
 
-####图片与链接
+#### 图片与链接
 插入链接与插入图片的语法很像，区别在一个` ! `号
 插入图片的地址需要图床，这里推荐 [CloudApp](http://www.getcloudapp.com/) 的服务，生成URL地址即可。
 
@@ -100,6 +100,8 @@ Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦�
 
 ```
  ![XXXX](http://xxx.png) 
+ 
+ <img src="default.gif" class="full-image" />
 
 ```
 
@@ -121,4 +123,3 @@ Markdown 的粗体和斜体也非常简单，用两个` * ` 包含一段文本
 * [Drafts + Scriptogr.am + Dropbox 打造移动端 Markdown 风格博客](http://jianshu.io/p/63HYZ6)
 * [图灵社区 - 怎样使用 Markdown](http://www.ituring.com.cn/article/23)
 * [为什么我们要学习 Markdown 的三个理由](http://news.cnblogs.com/n/139649/)
-* [Markdown 语法写作入门指南 by ibuick](http://ibuick.me/?p=4093)

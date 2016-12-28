@@ -1,5 +1,5 @@
 ---
-title: '[HEXO+Github] Blog 搭建指南(12.9)'
+title: '[HEXO+Github] Blog 搭建指南(12.28)'
 date: 2016-11-08 14:54:42
 categories: 技术
 tags:
@@ -12,3 +12,4 @@ tags:
 
 最近较忙 拖一会
 <!--more-->
+

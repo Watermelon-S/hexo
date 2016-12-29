@@ -6,5 +6,6 @@
 
   - 添加加载loading动画，设置cookie延迟时间为25分钟。<br>
   - 删除 hexo-baidu-url-submit 插件。<br>
-  - 百度SEO 开启 主题 _config.yml 里 baidu_push: true。<br><br>
+  - 百度SEO 开启 主题 _config.yml 里 baidu_push: true。
+<br><br>
 2016-11-01 上线

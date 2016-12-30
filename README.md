@@ -1,6 +1,7 @@
 ### 这是博客 hexo-NexT 修改后主题的文档源码。
 ***
 >changelog
+
 2016-12-30 更新
 
   - 添加托管 coding.net git 地址

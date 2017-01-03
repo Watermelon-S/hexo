@@ -83,8 +83,8 @@ duoshuo_shortname: watermelon-s
 
 #search
 algolia:
-  applicationID: 'V2HS15ATX6'
-  apiKey: 'b0e46cfd370aa2458666eadb38f3017b'
-  adminApiKey: '833b2c3ca943d22a39bc42a561daa322'
-  indexName: 'test'
+  applicationID: 'SXDRGXB3MB'
+  apiKey: '0b6f8d33694c0425935883fe24963273'
+  adminApiKey: 'e560f0d2475a73616951beed2003c93a'
+  indexName: 'blog'
   chunkSize: 5000

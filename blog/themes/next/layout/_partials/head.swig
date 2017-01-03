@@ -85,9 +85,9 @@
   var CONFIG = {
     root: '/',
     algolia: {
-          applicationID: 'V2HS15ATX6',
-          apiKey: 'b0e46cfd370aa2458666eadb38f3017b',
-          indexName: 'test',
+          applicationID: 'SXDRGXB3MB',
+          apiKey: '0b6f8d33694c0425935883fe24963273',
+          indexName: 'blog',
           hits: {"per_page":10},
           labels: {"input_placeholder":"搜索...","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，使用了 ${time} 毫秒"}
         },

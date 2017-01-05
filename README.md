@@ -2,6 +2,10 @@
 ***
 >changelog
 
+2017-01-03 更新
+
+  - 重置搜索功能Algolia API<br>
+  
 2016-12-30 更新
 
   - 添加托管 coding.net git 地址<br>

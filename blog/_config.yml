@@ -88,3 +88,4 @@ algolia:
   adminApiKey: 'e560f0d2475a73616951beed2003c93a'
   indexName: 'blog'
   chunkSize: 5000
+

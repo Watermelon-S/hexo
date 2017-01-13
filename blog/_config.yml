@@ -73,10 +73,12 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git #部署类型，使用github
-  repository: 
-      github: git@github.com:Watermelon-S/Watermelon-S.github.io.git,master
-      coding: git@git.coding.net:southveil/southveil.git
+- type: git 
+  repository: 'git@github.com:Watermelon-S/Watermelon-S.github.io.git'
+  branch: master
+- type: git 
+  repository: 'git@git.coding.net:southveil/southveil.git'
+  branch: master
 
 #多说
 duoshuo_shortname: watermelon-s

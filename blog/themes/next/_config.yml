@@ -6,7 +6,7 @@
 favicon: images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "南幕,弘,blog,next,hexo,gethub,音乐,muisc,southveil"
+keywords: "南幕,Hong,blog,muisc,southveil"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -29,7 +29,7 @@ canonical: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  categories: /categories
+  # categories: /categories
   # about: /about
   archives: /archives
   # tags: /tags

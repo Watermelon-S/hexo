@@ -2,7 +2,8 @@
   set js_commons = [
     'src/utils.js',
     'src/motion.js',
-    'src/wave-canvas.js'
+    'src/wave-canvas.js',
+    'src/jquery-pjax.js'
   ]
 %}
 

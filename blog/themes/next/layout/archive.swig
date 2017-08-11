@@ -5,7 +5,7 @@
 {% block title %} {{ __('title.archive') }} | {{ config.title }} {% endblock %}
 
 {% block page_class %} page-archive {% endblock %}
-
+<div id="content" class="content">
 {% block content %}
 
   <section id="posts" class="posts-collapse">
@@ -48,7 +48,7 @@
   {% include '_partials/pagination.swig' %}
 
 {% endblock %}
-
+</div>
 {% block sidebar %}
   {{ sidebar_template.render(false) }}
 {% endblock %}

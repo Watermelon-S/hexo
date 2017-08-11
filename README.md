@@ -1,6 +1,13 @@
 ### 这是博客 hexo-NexT 修改后主题的文档源码。
+
 ***
->Change log
+>NEW Change log
+
+	Release 0.1.0
+	
+
+***
+>旧版夭折博客 Change log
 
 2017-01-11 更新
 

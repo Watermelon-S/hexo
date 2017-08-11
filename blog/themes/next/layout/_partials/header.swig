@@ -32,12 +32,10 @@
 
   {% if theme.menu %}
   <nav class="nav">
-    <input type="checkbox" class="nav__cb" id="menu-cb" />
-    <div class="nav__content">
-        <ul id="menu" class="menu nav__items">
+        <ul id="menu" class="menu ">
           {% for name, path in theme.menu %}
             {% set itemName = name.toLowerCase() %}
-            <li class="menu-item menu-item-{{ itemName }} nav__item">
+            <li class="menu-item menu-item-{{ itemName }} ">
               <a href="{{ url_for(path) }}" rel="section" >
                 {% if theme.menu_icons.enable %}
                   <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i> <br />
@@ -48,7 +46,7 @@
           {% endfor %}
 
           {% if hasSearch %}
-            <li class="menu-item menu-item-search nav__item">
+            <li class="menu-item menu-item-search ">
               {% if theme.swiftype_key %}
                 <a href="javascript:;" class="st-search-show-outputs">
               {% elseif config.search %}
@@ -64,8 +62,6 @@
             </li>
           {% endif %}
         </ul>
-      </div>
-      <label class="nav__btn" for="menu-cb"><span>一</span></label>
   </nav>
     
   {% endif %}

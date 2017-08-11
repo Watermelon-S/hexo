@@ -1,0 +1,164 @@
+// Custom styles.
+
+/*=== [ 头部背景 ] ===*/
+.header-bgimg {
+  height: 465px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  clearfix();
+
+  +mobile() {
+    display: none;
+  }
+  & img {
+  	width: 100%;
+  }
+}
+/*=== [ HOME ] ===*/
+#home-sign {
+    width: 200%;
+    margin: 0 auto;
+    margin-left: -50%;
+}
+.sign-left {
+    width: 50%;
+    float: left;
+}
+.sign-right {
+    width: 50%;
+    float: left;
+}
+.sign-right img{
+  width: 550px;
+}
+/*=== [ LOGO ] ===*/
+.custom-logo-image{
+  width: 100px;
+  margin-top: -20px;
+}
+/*=== [ 固定导航栏 ] ===*/
+.header-inner {
+  //padding: 10px 0;
+  width:100% !important;
+  background-color: #fff;
+  //position: fixed;
+  //top: 0;
+  //right: 0;
+  //left: 0;
+  //z-index: 2;
+  //height:45px;
+  //border-bottom: 1px solid #e1e8ed;
+  transition: all .3s ease-in-out;
+}
+.site-brand-wrapper {
+	margin-left: 7%;
+}
+.site-nav {
+	margin-right: 7%;
+}
+.menu {
+	margin: -10px 0 0 0;
+}
+.menu .menu-item-active a {
+	border-bottom: 3px solid !important;
+}
+.menu .menu-item a {
+	height: 65px;
+  	line-height: 65px;
+	padding: 0 10px 0 6px;
+	font-size: 15px;
+  	box-sizing: border-box;
+  	border-bottom: 0px solid #FFFFFF;
+  	transition: all .2s ease-in-out;
+  	&:hover {
+	    background: none;
+	    border-radius: 0; 
+	    border-bottom-width: 3px;
+    }
+}
+.menu .menu-item {
+    margin-right: 5px;
+}
+/*=== [ footer ] ===*/
+.footer {
+  background: transparent;
+}
+.footer-inner {
+  width: 93% !important;
+  margin-bottom: 50px;
+}
+/*=== [ 滚动条 ] ===*/
+#mCSB_1 .mCSB_container {
+	width : 100%;
+}
+/*=== [ 首页文章配置 ] ===*/
+.main {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.main-inner {
+	width: 700px !important;
+    +desktop-large() {
+    	width: 800px !important;
+    }
+    +mobile() {
+    	width: auto !important;
+    }
+}
+.posts-expand {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 10%;
+  padding-left: 10%;
+  height: 600px;
+}
+.posts-expand .post-title, .posts-expand .post-meta {
+	text-align: center;
+}
+.post-button {
+	text-align: right;
+}
+.is-index .post {
+	padding: 20px;
+	margin-top: 45px;
+    box-shadow: 5px 5px 25px #bbbaba;
+    +mobile() {
+    	padding: 0;
+    }
+}
+.is-index .post-banner{
+	padding-bottom: 20px;
+	+mobile() {
+		padding-bottom: 0;
+	}
+}
+.is-index .post-body{
+	padding: 10px;
+}
+/*=== [ 文章导航 ] ===*/
+.use-motion .motion-element {
+	opacity: 1;
+}
+.post-toc-wrap {
+	position: fixed;
+    top: 15%;
+    right: 10%;
+    +desktop-centre(){
+    	display: none;
+    }
+    +mobile() {
+    	display: none;
+    }
+}
+.post-toc .nav .nav-child {
+	display: block;
+}
+.post-toc>p{
+	padding: 0 0 0 10px;
+    margin: 0;
+    border-left: 4px solid #ff8a00;
+}
+.post-toc-content {
+	padding: 5px;
+}

@@ -26,7 +26,7 @@
       <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
       <div class="a-header "></div>     
     </header>
-
+    <audio loop="1" preload="auto" controls="controls" src="http://sc1.111ttt.com/2017/1/05/09/298092032442.mp3"></audio>
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -41,7 +41,6 @@
         {% endif %}
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         {% include '_partials/footer.swig' %}

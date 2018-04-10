@@ -15,69 +15,46 @@
 
   {% include '_third-party/analytics/index.swig' %}
 
-  {% set container_class = "container " %}
+  {% set container_class = " " %}
   {% if theme.sidebar.position %}
     {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
   {% endif %}
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
     <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
+    <!-- header -->
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader" role="header">
+      <div class="container"> {%- include '_partials/header.swig' %} </div>
       {% if theme.home_banner.enable %}
           <div class="header-bgimg">
              <img src="{{ theme.home_banner.default }}">
           </div>
       {% endif %}
     </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
+    <!-- header -->
+    <!-- main -->
+    <main role="main-inner-wrapper" class="container">
+        <div id="content" class="content">
             {% block content %}{% endblock %}
-          </div>
-          {% include '_third-party/duoshuo-hot-articles.swig' %}
-          {% include '_partials/comments.swig' %}
         </div>
-        {% if theme.sidebar.display !== 'remove' %}
-          {% block sidebar %}{% endblock %}
-        {% endif %}
-      </div>
+        {% include '_partials/comments.swig' %}
     </main>
-    
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="links-of-author motion-element">
-          {% if theme.social %}
-            {% for name, link in theme.social %}
-              <span class="links-of-author-item">
-                <a href="{{ link }}" target="_blank" title="{{ name }}">
-                  {% if theme.social_icons.enable %}
-                    <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
-                  {% endif %}
-                  {{ name }}
-                </a>
-              </span>
-            {% endfor %}
-          {% endif %}
-        </div>
+    <!-- main -->
+    <!-- footer -->
+    <footer role="footer">
         {% include '_partials/footer.swig' %}
         {% include '_third-party/analytics/busuanzi-counter.swig' %}
         {% block footer %}{% endblock %}
-      </div>
     </footer>
-
     {% if not theme.sidebar.b2t %}
-      <div class="back-to-top">
+      <button class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         {% if theme.sidebar.scrollpercent %}
           <span id="scrollpercent"><span>0</span>%</span>
         {% endif %}
-      </div>
+      </button>
     {% endif %}
-
+    <!-- footer -->
   </div>
 
   {% include '_scripts/vendors.swig' %}
@@ -86,9 +63,9 @@
   {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
   {% include scheme_script %}
 
-  {% block script_extra %}{% endblock %}
-
   {% include '_scripts/boostrap.swig' %}
+
+  {% block script_extra %}{% endblock %}
 
   {% include '_third-party/comments/index.swig' %}
   {% include '_third-party/search/index.swig' %}

@@ -1,40 +1,40 @@
 ---
 title: Hello World
-banner: http://blog.zhangruipeng.me/hexo-theme-hueman/gallery/salt-lake.jpg
+tags:
+ - CSS
+photos: 
+    - "http://oz2tkq0zj.bkt.clouddn.com/17-11-9/52323298.jpg"
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-<!-- more -->
-## Quick Start
+### 测试内容
 
-### Create a new post
-
-``` bash
-$ hexo new "My New Post"
+<h4 data-type="CSS">CSS</h4>
+```css
+.el {
+  transition: max-height 0.5s;
+  overflow: hidden;
+  max-height: 0;
+}
+.trigger:hover > .el {
+  max-height: var(--max-height);
+}
 ```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
+<h4 data-type="HTML">HTML</h4>
+```html
+<div class="trigger">
+    <p>Hover me to see a height transition.</p>
+    <div class="el">
+        <p>Welcome to [Hexo](https://hexo.io/)!</p>
+        <p>This is your very first post.</p>
+        <p>Check [documentation](https://hexo.io/docs/) for more info.</p>
+        <p>If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).</p>
+    </div>
+</div>
 ```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
+<h4 data-type="JavaScript">JavaScript</h4>
+```JavaScript
+var el = document.querySelector('.el');
+var height = el.scrollHeight;
+el.style.setProperty('--max-height', height + 'px');
 ```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+#### Demo

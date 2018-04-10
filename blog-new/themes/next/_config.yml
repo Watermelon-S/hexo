@@ -20,7 +20,7 @@ since: 2016
 authoricon: heart
 
 # Footer `powered-by` and `theme-info` copyright
-copyright: true
+copyright: false
 
 
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
@@ -160,7 +160,7 @@ social_icons:
 
 # Table Of Contents in the Sidebar
 toc:
-  enable: true
+  enable: false
 
   # Automatically add list number to toc.
   number: true
@@ -196,7 +196,7 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button
-  scrollpercent: true
+  scrollpercent: false
 
 
 # Blog rolls
@@ -215,40 +215,35 @@ home_banner:
   enable: false
   default: https://www.cssplus.org/wp-content/uploads/2017/05/201704201406.jpg
 
-# Article header banner img
-post_banner:
-  enable: false
-  default: http://blog.zhangruipeng.me/hexo-theme-hueman/gallery/salt-lake.jpg
-
 # ---------------------------------------------------------------
 # Post Settings
 # ---------------------------------------------------------------
 
 # Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
+scroll_to_more: false
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: false
-  length: 150
+  length: 10
 
 # Post meta display settings
 post_meta:
   item_text: true
   created_at: true
-  updated_at: false
-  categories: false
+  updated_at: true
+  categories: true
 
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
+  wordcount: true
+  min2read: true
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -483,7 +478,7 @@ exturl: false
 use_motion: true
 
 # Fancybox
-fancybox: false
+fancybox: true
 
 # Canvas-nest
 canvas_nest: false

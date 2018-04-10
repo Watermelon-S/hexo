@@ -1,5 +1,5 @@
 <div class="site-brand-wrapper">
-
+  <!-- logo -->
   <div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
     {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
       <div class="site-meta-headline">
@@ -34,17 +34,10 @@
       {% endif %}
 
   </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+  <!-- logo -->
 </div>
-
-<nav class="site-nav">
+<!-- nav -->
+<nav role="header-nav" class="navy">
   {% set hasSearch = theme.swiftype_key || theme.algolia_search.enable || theme.tinysou_Key || theme.local_search.enable %}
 
   {% if theme.menu %}
@@ -52,7 +45,7 @@
       {% for name, path in theme.menu %}
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName }}">
-          <a href="{{ url_for(path) }}" rel="section">
+          <a href="{{ url_for(path) }}" rel="section" class="nav-item">
             {% if theme.menu_icons.enable %}
               <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i> <br />
             {% endif %}
@@ -84,5 +77,5 @@
     </div>
   {% endif %}
 </nav>
-
+<!-- nav -->
 {% include '../_custom/header.swig' %}

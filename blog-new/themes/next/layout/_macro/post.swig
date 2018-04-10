@@ -7,7 +7,6 @@
   {% if post.sticky > 0 %}
     {% set post_class = post_class + ' ' + 'post-sticky' %}
   {% endif %}
-
   
   <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
@@ -22,10 +21,8 @@
       <meta itemprop="name" content="{{ config.title }}">
     </span>
 
+    {% if false %}
     {% if not headlessPost %}
-      {% if is_index and theme.post_banner.enable %}
-          <img class="post-banner" src="{{ post.banner | default(theme.post_banner.default)}}">
-      {% endif %}
       <header class="post-header">
         
         {# Not to show title for quote posts that do not have a title #}
@@ -251,30 +248,44 @@
         </div>
       </header>
     {% endif %}
-
+    {% endif %}
 
     <div class="post-body" itemprop="articleBody">
-
-      {# Gallery support #}
-      {% if post.photos and post.photos.length %}
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          {% set COLUMN_NUMBER = 3 %}
-          {% for photo in post.photos %}
-            {% if loop.index0 % COLUMN_NUMBER === 0 %}<div class="post-gallery-row">{% endif %}
-              <a class="post-gallery-img fancybox"
-                 href="{{ url_for(photo) }}" rel="gallery_{{ post._id }}"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="{{ url_for(photo) }}" itemprop="contentUrl"/>
-              </a>
-            {% if loop.index0 % COLUMN_NUMBER === 2 %}</div>{% endif %}
-          {% endfor %}
-
-          {# Append end tag for `post-gallery-row` when (photos size mod COLUMN_NUMBER) is less than COLUMN_NUMBER #}
-          {% if post.photos.length % COLUMN_NUMBER > 0 %}</div>{% endif %}
-        </div>
+      {% if is_index %}
+        <section class="blog-content">
+          <a href="{{ post.path }}">
+            <figure>
+                <div class="post-date">
+                    <span>{{ moment(post.date).format('DD') }}</span> {{ moment(post.date).format('MMMM YYYY') }}
+                </div>
+                <img src="{{ post.photos }}" title="查看更多" class="img-responsive"/>
+            </figure>
+          </a>
+          <article>
+              {{ post.title or post.link }}
+          </article>
+        </section>
       {% endif %}
 
-      {% if is_index %}
+      {% if false %}
+        {# Gallery support #}
+        {% if post.photos and post.photos.length %}
+          <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+            {% set COLUMN_NUMBER = 3 %}
+            {% for photo in post.photos %}
+              {% if loop.index0 % COLUMN_NUMBER === 0 %}<div class="post-gallery-row">{% endif %}
+                <a class="post-gallery-img fancybox"
+                   href="{{ url_for(photo) }}" rel="gallery_{{ post._id }}"
+                   itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                  <img src="{{ url_for(photo) }}" itemprop="contentUrl"/>
+                </a>
+              {% if loop.index0 % COLUMN_NUMBER === 2 %}</div>{% endif %}
+            {% endfor %}
+
+            {# Append end tag for `post-gallery-row` when (photos size mod COLUMN_NUMBER) is less than COLUMN_NUMBER #}
+            {% if post.photos.length % COLUMN_NUMBER > 0 %}</div>{% endif %}
+          </div>
+        {% endif %}
         {% if post.description and theme.excerpt_description %}
           {{ post.description }}
           <!--noindex-->
@@ -311,12 +322,21 @@
             {{ post.content }}
           {% endif %}
         {% endif %}
-      {% else %}
-        {{ post.content }}
+      {% endif  %}
+
+      {% if not is_index %}
+          {% if post.tags and post.tags.length %}
+            <nav class="tags post-tags">
+              {% for tag in post.tags %}
+                <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
+              {% endfor %}
+            </nav>
+          {% endif %}
+          <div class="snippet">
+              {{ post.content }}
+          </div>
       {% endif  %}
     </div>
-
-    
     
     <div>
       {% if not is_index %}
@@ -337,13 +357,7 @@
     </div>
 
     <footer class="post-footer">
-      {% if post.tags and post.tags.length and not is_index %}
-        <div class="post-tags">
-          {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
+      
 
       {% if not is_index %}
         {% if (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}

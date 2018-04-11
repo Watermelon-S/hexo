@@ -55,6 +55,17 @@ function fPjaxEndCallback(e){
     if ($(e.relatedTarget).hasClass('nav-item')) {
     	$("#menu-button").click();
     }
+    if ($(e.relatedTarget).attr("rel") == "next" || $(e.relatedTarget).attr("rel") == "prev" || $(e.relatedTarget).hasClass("post-title-link")) {
+    	console.log("11")
+    	$("body").mCustomScrollbar("scrollTo","top",{scrollInertia:10});
+    }
+    if(document.getElementById("grid")){
+		new AnimOnScroll( document.getElementById( 'grid' ), {
+			minDuration : 0.4,
+			maxDuration : 0.7,
+			viewportFactor : 0.2
+		} );
+	}
 }
 function fCodeInstantDisplay(){
     let sCSS,sHTML,sJS,PageCode,i,d,t,n,r,l;
@@ -83,7 +94,7 @@ function fCodeInstantDisplay(){
     	title: $(".snippet > h3 > span").text(),
         css: sCSS.replace(/(\{|\;|\})/g,"$1\n"),
         html: sHTML ? sHTML.replace(/(\>)/g,"$1\n"): "",
-        js: sJS ? sJS.replace(/(\;)/g,"$1\n"): ""
+        js: sJS ? sJS.replace(/(\;|\{|\;|\})/g,"$1\n"): ""
     };
     n.value = JSON.stringify(l),
     t.appendChild(n),

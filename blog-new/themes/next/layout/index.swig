@@ -17,11 +17,11 @@
 
                 	<header>
 
-                    	<h2><span>News</span> Updates from studio</h2>
+                    	<h2><span>News</span> {{ theme.home_news.title }}</h2>
 
                     </header>
 
-                    <p>Get all information about our studio from latest news posts & updates page.</p>
+                    <p>{{ theme.home_news.inner }}</p>
 
                 </article>
         	</li>

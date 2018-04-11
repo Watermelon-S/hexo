@@ -34,11 +34,12 @@
 .posts-expand .post-body img{
   padding: 0;
   border: 0;
+  //width: 100%;
 }
 /*=== [ LOGO ] ===*/
 .custom-logo-image{
   width: 100px;
-  margin-top: -20px;
+  margin-top: -40px;
 }
 /*=== [ 导航栏 ] ===*/
 .menu .menu-item a {
@@ -151,6 +152,36 @@
 .post-toc-content {
 	padding: 5px;
 }
+/*=== [ 归档 ] ===*/
+.posts-collapse{
+  width: 65%;
+  margin: 3rem auto;
+}
+/*=== [ 统计 ] ===*/
+.busuanzi-count{
+    text-align: center;
+    display: block;
+    font-size: 13px;
+    line-height: 13px;
+    color: #9c9c9c;
+    margin: .6rem 0;
+}
+.site-uv{
+  width:50%;
+  text-align:right;
+  margin-right: 0px;
+}
+.site-uv::after{
+  padding-left: 0px;
+}
+.site-pv{
+  width:50%;
+  text-align:left;
+  padding-left: 10px;
+}
+.site-uv,.site-pv{
+  float: left;
+}
 /*==========new===========
 
   1. Body style
@@ -232,7 +263,10 @@ a {
 a:focus, img:focus, button:focus, .btn:focus {
   outline: none;
 }
-
+a:hover,
+a:focus {
+  text-decoration: none;
+}
 ::-moz-selection {
 background-color:#fb5353;
 color:#fff;
@@ -249,7 +283,7 @@ text-shadow:none;
 /*===== Header ===*/
 
 header[role="header"] {
-  padding-top: 50px;
+  padding-top: 60px;
   padding-bottom: 39px
 }
 header[role="header"] h1 {
@@ -544,7 +578,7 @@ section.blog-content figure .post-date {
   font-weight: 800;
   font-size: 14px;
   line-height: 18px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: block;
   background-color: #fb5353;
   width: 130px;
@@ -884,22 +918,26 @@ color:#404040;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }
+.snippet ul{
+    margin-top:10px;
+}
 .snippet h3{
     font-size: 2.1rem;
     padding: .5rem 0;
     border-bottom: 1px solid rgba(0,32,128,.1);
     margin-bottom: 1.25rem;
-    margin-top: 0;
+    margin-top: 20px;
     line-height: 1.3;
     color: #324b64;
 }
 .snippet p{
     margin-top: .5rem; 
-    font-size: 1.6rem;
+    font-size: 1.15rem;
+    line-height: 2.1rem;
 }
 .snippet h4{
     display: inline-block;
-    margin: 1rem 0 .5rem;
+    margin: .8rem 0 .7rem;
     font-size: 1.6rem;
     line-height: 2;
 }

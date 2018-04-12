@@ -17,7 +17,7 @@
 
                 	<header>
 
-                    	<h2><span>News</span> {{ theme.home_news.title }}</h2>
+                    	<h2><span>News</span> {{ theme.home_news.title }} </h2>
 
                     </header>
 

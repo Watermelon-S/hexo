@@ -21,7 +21,7 @@
       <meta itemprop="name" content="{{ config.title }}">
     </span>
 
-    {% if false %}
+    {% if not is_index %}
     {% if not headlessPost %}
       <header class="post-header">
         
@@ -168,18 +168,16 @@
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
-
             {% elseif theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="{{ url_for(post.path) }}" itemprop="commentCount"></span>
-                </a>
+            <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
               </span>
-
+              <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
+                <span class="post-comments-count valine-comment-count" data-xid="{{ url_for(post.path) }}" itemprop="commentCount"></span>
+              </a>
+            </span>
             {% elseif theme.changyan.enable and theme.changyan.appid and theme.changyan.appkey %}
               <span class="post-comments-count">
               <span class="post-meta-divider">|</span>
@@ -277,6 +275,18 @@
               {{ post.title or post.link }}
           </article>
         </section>
+      {% else %}
+          {% if post.tags and post.tags.length %}
+            <nav class="tags post-tags">
+              {% for tag in post.tags %}
+                <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
+              {% endfor %}
+            </nav>
+          {% endif %}
+          <div class="snippet">
+              {{ post.content }}
+          </div> 
+
       {% endif %}
 
       {% if false %}
@@ -334,19 +344,6 @@
             {{ post.content }}
           {% endif %}
         {% endif %}
-      {% endif  %}
-
-      {% if not is_index %}
-          {% if post.tags and post.tags.length %}
-            <nav class="tags post-tags">
-              {% for tag in post.tags %}
-                <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
-              {% endfor %}
-            </nav>
-          {% endif %}
-          <div class="snippet">
-              {{ post.content }}
-          </div>
       {% endif  %}
 
     </div>
@@ -418,5 +415,9 @@
       {% endif %}
     </footer>
   </article>
+
+  {% if not is_index and theme.valine.appid and theme.valine.appkey %}
+      <div class="comments" id="comments">
+  {% endif %}
 
 {% endmacro %}

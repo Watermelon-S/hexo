@@ -3,10 +3,10 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+favicon: /images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "blog, 前端, 极简"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-since: 2018
+since: 2016
 
 # icon between year and author @Footer
 authoricon: heart
@@ -85,13 +85,13 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
+  host: 
 
   # Global font settings used on <body> element.
   global:
     # external: true will load this font family from host.
     external: true
-    family: Lato
+    family: 
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
@@ -208,8 +208,8 @@ sidebar:
 # ---------------------------------------------------------------
 
 home_news:
-  title: Southveil
-  inner: 这是一个新主题，极简风格，名字还没想好。
+  title: 简约不简单
+  inner: 自留地，记录点点滴滴。
 
 # ---------------------------------------------------------------
 # Banner Settings
@@ -246,9 +246,9 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
-  item_text: true
-  wordcount: true
-  min2read: true
+  item_text: false
+  wordcount: false
+  min2read: false
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -325,9 +325,9 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: false
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  enable: true
+  appid: t4DNumiFbo90DAvpv63kY0ze-gzGzoHsz # your leancloud application appid
+  appkey: re0jm0Gfz4nsKE3P6qaWpl7x  # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder

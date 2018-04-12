@@ -37,7 +37,6 @@
         <div id="content" class="content">
             {% block content %}{% endblock %}
         </div>
-        {% include '_partials/comments.swig' %}
     </main>
     <!-- main -->
     <!-- footer -->
@@ -58,6 +57,7 @@
   </div>
 
   {% include '_scripts/vendors.swig' %}
+  {% include '_third-party/comments/index.swig' %}
   {% include '_scripts/commons.swig' %}
 
   {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
@@ -67,7 +67,6 @@
 
   {% block script_extra %}{% endblock %}
 
-  {% include '_third-party/comments/index.swig' %}
   {% include '_third-party/search/index.swig' %}
   {% include '_third-party/analytics/lean-analytics.swig' %}
   {% include '_third-party/seo/baidu-push.swig' %}

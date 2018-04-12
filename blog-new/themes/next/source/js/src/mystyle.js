@@ -3,6 +3,7 @@ $(document).ready(function () {
 	/*=============== init ===============*/
 	fCodeInstantDisplay();
 	fScrollInit();
+	// fValineInit();
 	/*=============== pjax ===============*/
 	$(document).pjax('a', '#content', { fragment: ('#content'), timeout: 10000 });
 	$(document).on('pjax:start', function(xhr, options) { 
@@ -43,7 +44,6 @@ function fPjaxRollBack(){
 	NProgress.start();
 }
 function fPjaxEndCallback(e){
-	NProgress.done();
 	fCodeInstantDisplay();
   	NexT.motion.middleWares.postList(NexT.motion.integrator);
     $('.archive-year').velocity('transition.slideLeftIn');
@@ -56,7 +56,6 @@ function fPjaxEndCallback(e){
     	$("#menu-button").click();
     }
     if ($(e.relatedTarget).attr("rel") == "next" || $(e.relatedTarget).attr("rel") == "prev" || $(e.relatedTarget).hasClass("post-title-link")) {
-    	console.log("11")
     	$("body").mCustomScrollbar("scrollTo","top",{scrollInertia:10});
     }
     if(document.getElementById("grid")){
@@ -66,6 +65,8 @@ function fPjaxEndCallback(e){
 			viewportFactor : 0.2
 		} );
 	}
+	// fValineInit();
+	NProgress.done();
 }
 function fCodeInstantDisplay(){
     let sCSS,sHTML,sJS,PageCode,i,d,t,n,r,l;

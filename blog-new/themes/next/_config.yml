@@ -37,10 +37,12 @@ seo: false
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
+  archives: /archives
+  # comment: /comment
+  neighbor: /neighbor
+  about: /about
   # home: /
   # categories: /categories
-  # about: /about
-  archives: /archives
   # tags: /tags
   # sitemap: /sitemap.xml
   #commonweal: /404.html
@@ -52,7 +54,7 @@ menu:
 #   Key is the name of menu item and value is the name of FontAwesome icon. Key is case-senstive.
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
-  enable: true
+  enable: false
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
@@ -330,7 +332,7 @@ valine:
   appkey: re0jm0Gfz4nsKE3P6qaWpl7x  # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: Just go go # comment box placeholder
+  placeholder: ヾﾉ≧∀≦)o来啊，快活啊! # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size

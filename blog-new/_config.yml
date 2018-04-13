@@ -69,5 +69,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git 
-  repository: 'git@git.coding.net:southveil/blog-new.git'
+  repository: 'git@git.coding.net:southveil/southveil.git'
   branch: master

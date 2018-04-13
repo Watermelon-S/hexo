@@ -1,11 +1,7 @@
 <!-- logo -->
-
-    <h1>
-
+    <h1 class="hide">
         <a href="/" title="SouthVeil"><img src="{{ theme.custom_logo.image }}" title="SouthVeil" alt="SouthVeil"/></a>
-
     </h1>
-
 <!-- logo -->
 <div class="links-of-author motion-element">
   
@@ -28,7 +24,6 @@
     <span itemprop="copyrightYear">{{ current }}</span>
     <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>..All rights Resved
 </p>
-
 
 {% if theme.copyright %}
   <div class="copy-right">

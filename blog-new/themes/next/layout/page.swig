@@ -14,7 +14,12 @@
 {% endblock %}
 
 {% block content %}
-
+  {% if page.title === "关于" %}
+    {{ page.content }}
+  {% elif page.title === "邻居" %}
+    {{ page.content }}
+    <div class="comments" id="comments">
+  {% else %}
   <div id="posts" class="posts-expand">
   {% include '_partials/page-header.swig' %}
     {# tagcloud page support #}
@@ -40,7 +45,7 @@
       {{ page.content }}
     {% endif %}
   </div>
-
+  {% endif %}
 {% endblock %}
 
 {% block sidebar %}

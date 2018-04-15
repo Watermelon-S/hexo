@@ -166,5 +166,5 @@ function fNavInit(){
 
 		} );
 	}
-	console.log("\n %c SouthVeil %c mail://408205237@qq.com \n","color: #fadfa3; background: #030307; padding:5px 0;","background: #fadfa3; padding:5px 0;")
+	console.log("\n %c SouthVeil %c mail://southveil@qq.com \n","color: #fadfa3; background: #030307; padding:5px 0;","background: #fadfa3; padding:5px 0;")
 }

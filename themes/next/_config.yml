@@ -39,7 +39,7 @@ seo: false
 menu:
   archives: /archives
   # comment: /comment
-  neighbor: /neighbor
+  neighbor: /neighbor/
   about: /about
   # home: /
   # categories: /categories

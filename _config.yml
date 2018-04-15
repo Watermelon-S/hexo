@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://southveil.coding.me
+url: https://southveil.red
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -66,7 +66,6 @@ pagination_dir: page
 theme: next
 
 # neat
-
 neat_enable: false
 
 neat_html:
@@ -85,6 +84,27 @@ neat_js:
   compress:
   exclude:
     - '*.min.js'
+
+# live2d
+## https://github.com/EYHN/hexo-helper-live2d
+
+live2d:
+  dev:
+    log: false
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  model:
+    use: live2d-widget-model-shizuku
+  display:
+    position: left
+    width: 150
+    height: 300
+    hOffset: 100
+  mobile:
+    show: false
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

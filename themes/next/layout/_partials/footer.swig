@@ -23,8 +23,11 @@
     &copy; {% if theme.since and theme.since != current %} {{ theme.since }} - {% endif %}
     <span itemprop="copyrightYear">{{ current }}</span>
     <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>..All rights Resved
+    
 </p>
-
+<p class="copy-right">
+    Hosted by <a href="https://pages.coding.me">Coding Pages</a>
+</p>
 {% if theme.copyright %}
   <div class="copy-right">
     <div class="powered-by">

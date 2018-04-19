@@ -113,6 +113,7 @@ path: sitemap.xml
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: coding 
-  repository: 'git@git.coding.net:southveil/southveil.git'
+- type: git 
+  repository: 
+    coding: 'git@git.coding.net:southveil/southveil.git'
   branch: master

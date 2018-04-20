@@ -89,9 +89,7 @@ neat_js:
 ## https://github.com/EYHN/hexo-helper-live2d
 
 live2d:
-  dev:
-    log: false
-  enable: true
+  enable: false
   scriptFrom: local
   pluginRootPath: live2dw/
   pluginJsPath: lib/

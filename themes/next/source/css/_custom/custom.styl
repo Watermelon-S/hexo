@@ -32,11 +32,28 @@
   margin: 10px 10px 10px 0;
 }
 .friend a {
-  display: block;
-  color: #666;
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
   padding: 5px 13px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+  border: 0px solid #ddd;
+  //border-radius: 3px;
+}
+.friend a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.friend a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /*=== [ HOME ] ===*/

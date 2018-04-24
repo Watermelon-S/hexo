@@ -31,7 +31,7 @@
   display: inline-block;
   margin: 10px 10px 10px 0;
 }
-.friend a {
+.friend a,.snippet a{
   display: inline-block;
   position: relative;
   color: #0087ca;
@@ -39,7 +39,8 @@
   border: 0px solid #ddd;
   //border-radius: 3px;
 }
-.friend a::after {
+
+.friend a::after,.snippet a::after{
   content: '';
   position: absolute;
   width: 100%;
@@ -51,7 +52,7 @@
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-.friend a:hover::after {
+.friend a:hover::after,.snippet a:hover::after{
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -274,6 +275,16 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, input, main {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+}
 li {list-style-type:none;}
 input, textarea {
   -webkit-appearance: none;
@@ -289,16 +300,6 @@ body, img, .commentys-form input[type="text"], .commentys-form input[type="email
   -o-transition: all .2s linear;
   -moz-transition: all .2s linear;
   -webkit-transition: all .2s linear;
-}
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, input, main {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-  border: 0;
-  outline: 0;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, img, main {
   display: block
@@ -498,11 +499,21 @@ main[role="main-home-wrapper"] article[role="pge-title-content"] p, main[role="m
   line-height: 30px;
   color: #454545
 }
+main[role="main-inner-wrapper"] section.blog-content:hover article {
+  background-color: #fb5353;
+  color: #FFF
+}
+main[role="main-inner-wrapper"] section.blog-content figure, section.blog-content figure img, section.blog-content article {
+  transition-delay: 0s;
+  transition-duration: 0.6s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
 /*===== footer ===*/
 
 footer[role="footer"] {
   background-color: #FFF;
-  padding-top: 100px;
+  //padding-top: 100px;
   padding-bottom: 77px
 }
 footer[role="footer"] > h1 a {
@@ -669,8 +680,12 @@ section.blog-content:hover figure img {
     padding-top:0;
   }
 }
+.snippet a{
+  padding: 5px 0 !important;
+}
 .snippet ul{
   margin-top:10px;
+  padding-left: 20px;
 }
 .snippet h3{
   font-size: 2.1rem;
@@ -776,4 +791,29 @@ section.blog-content:hover figure img {
 }
 .snippet .highlight .mCSB_horizontal.mCSB_inside > .mCSB_container{
   margin-bottom: 10px;
+}
+#thanks{
+  display: block;
+  border: none;
+  outline: none;
+  width: 150px;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-size: 21px;
+  color: #FFF;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background-color: #e84d49;
+  margin: 55px auto;
+  margin-bottom: 0;
+  text-align: center;
+}
+#thanks::after{
+  content: '';
+  position: absolute;
+  width: 90%;
+  margin: 0 auto;
+  bottom: 100px;
+  left: 5%;
+  border: 1px dashed #ddd;
 }

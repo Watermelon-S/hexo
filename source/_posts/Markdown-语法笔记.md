@@ -1,7 +1,6 @@
 ---
 title: Markdown 语法笔记
 date: 2016-11-07 12:41:23
-categories: 技术
 tags:
  - markdown
 photo:
@@ -79,7 +78,6 @@ photo:
 
 #### 图片与链接
 插入链接与插入图片的语法很像，区别在一个` ! `号
-插入图片的地址需要图床，这里推荐 [CloudApp](http://www.getcloudapp.com/) 的服务，生成URL地址即可。
 
 ##### 链接
 

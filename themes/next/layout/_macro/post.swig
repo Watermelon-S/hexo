@@ -285,6 +285,7 @@
           {% endif %}
           <div class="snippet">
               {{ post.content }}
+              <p id="thanks">感谢阅读</p>
           </div> 
 
       {% endif %}

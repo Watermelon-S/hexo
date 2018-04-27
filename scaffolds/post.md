@@ -5,7 +5,7 @@ tags:
 comments: 
 categories: 
 photo: 
-  - "http://ogb8wavl2.bkt.clouddn.com/hello-world.jpg"
+  - ""
 ---
 ### 
 <h4 data-type="HTML">HTML</h4>

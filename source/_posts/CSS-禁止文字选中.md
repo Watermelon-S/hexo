@@ -4,7 +4,7 @@ date: 2017-01-06 14:52:34
 tags:
  - CSS
 photos: 
- - "http://ogb8wavl2.bkt.clouddn.com/default-image-4.jpg"
+ - "https://i.loli.net/2018/04/27/5ae2e824e0083.jpg"
 ---
 ### 现象
 <blockquote class="blockquote-center">

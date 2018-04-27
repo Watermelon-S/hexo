@@ -4,7 +4,7 @@ date: 2018-04-06 14:52:34
 tags:
  - CSS
 photos: 
- - "http://ogb8wavl2.bkt.clouddn.com/hello-world.jpg"
+ - "https://i.loli.net/2018/04/27/5ae2e83cbef11.jpg"
 ---
 
 ### 测试内容

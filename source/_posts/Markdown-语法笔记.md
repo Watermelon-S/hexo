@@ -4,7 +4,7 @@ date: 2016-11-07 12:41:23
 tags:
  - markdown
 photo:
- - "http://ogb8wavl2.bkt.clouddn.com/markdown-note.jpg"
+ - "https://i.loli.net/2018/04/27/5ae2e86e6316c.jpg"
 ---
 
 ### 导语
